@@ -59,8 +59,8 @@ class MainActivity : Activity() {
 
         //한국 교통카드
         if (id != null) {
-//            val card = TMoney(id)
-//            txt?.text = card.type + "\n" + card.balance + "원"
+            val card = TMoney(id)
+            txt?.text = card.type + "\n" + card.balance + "원"
         }
 
         //일본 교통카드
