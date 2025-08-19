@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">교통카드 잔액조회</string>
+    <string name="scan_card">스마트폰의 NFC 기능으로 교통카드를 스캔하세요.</string>
 </resources>
