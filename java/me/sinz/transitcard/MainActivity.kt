@@ -65,8 +65,8 @@ class MainActivity : Activity() {
 
         //일본 교통카드
         else {
-//            val card = FeliCa(tag)
-//            txt?.text = "Suica 계열\n" + card.balance + "엔"
+            val card = FeliCa(tag)
+            txt?.text = "Suica 계열\n" + card.balance + "엔"
         }
 
     }
