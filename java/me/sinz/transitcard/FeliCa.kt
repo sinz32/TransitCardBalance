@@ -9,6 +9,7 @@ class FeliCa(tag: Tag) {
 
     var id: String? = null
     var balance:Int? = null
+    var type = "Suica 계열"
 
     init {
         val nf = NfcF.get(tag)
@@ -21,6 +22,8 @@ class FeliCa(tag: Tag) {
         this.id = data_str.substring(4, 4 + 16)
         readLastUsage(data)
         nf.close()
+
+        if (SinZ.bytes2hex(nf.systemCode).equals("80DE")) type = "IruCa"
     }
 
     @Throws(java.lang.Exception::class)
