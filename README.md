@@ -8,5 +8,5 @@
 - [x] 이즐 (캐시비)
 - [x] 레일플러스
 - [x] Suica
-- [ ] IruCa
+- [x] IruCa
 
