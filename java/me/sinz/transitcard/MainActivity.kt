@@ -3,6 +3,7 @@ package me.sinz.transitcard
 import android.app.Activity
 import android.app.PendingIntent
 import android.content.Intent
+import android.graphics.Color
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.IsoDep
@@ -10,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import me.sinz.library.SinZ
@@ -31,8 +33,25 @@ class MainActivity : Activity() {
         txt?.gravity = Gravity.CENTER or Gravity.CENTER_VERTICAL
         layout.addView(txt)
         val pad = SinZ.dip2px(this, 16)
-        txt?.setPadding(pad, pad, pad, pad)
-        setContentView(layout)
+        txt?.setPadding(pad, pad, pad, SinZ.dip2px(this, 64))
+
+        val bottom = RelativeLayout(this)
+        val params1 = RelativeLayout.LayoutParams(-1, -1)
+        params1.addRule(RelativeLayout.CENTER_IN_PARENT)
+        layout.layoutParams = params1
+        bottom.addView(layout)
+
+        val copy = TextView(this)
+        copy.text = "© 2023-2025 SinZ, All rights reserved."
+        copy.textSize = 12f
+        copy.gravity = Gravity.CENTER
+        copy.setPadding(pad, pad, pad, pad)
+        val params2 = RelativeLayout.LayoutParams(-1, -2)
+        params2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM)
+        copy.layoutParams = params2
+        bottom.addView(copy)
+
+        setContentView(bottom)
 
         adapter = NfcAdapter.getDefaultAdapter(this)
         val intent = Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
