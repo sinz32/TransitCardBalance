@@ -13,3 +13,6 @@
 ### 일본
  - Suica 및 상호호환카드 (ICOCA, PASMO 등)
  - IruCa
+
+## 다운로드
+- [깃허브 릴리즈](https://github.com/sinz32/TransitCardBalance/releases)에서 `TransitCardBalance_v1.0.apk` 파일을 받아서 설치하시면 됩니다.
