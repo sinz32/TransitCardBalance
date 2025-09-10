@@ -11,7 +11,8 @@
  - 레일플러스
 
 ### 일본
- - Suica 및 상호호환카드 (ICOCA, PASMO 등)
+ - Suica 및 상호호환카드 (Kitaca, TOICA, ICOCA, SUGOCA, PASMO, manaca, nimoca, 하야카켄)
+ - 상호호환카드 중 후불교통카드인 PiTaPa는 테스트하지 않음
  - IruCa
 
 ## 다운로드
